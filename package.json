@@ -1,0 +1,34 @@
+{
+  "name": "login-system",
+  "version": "1.0.0",
+  "description": "Backend for a login system",
+  "//": [
+    "server/server.js"
+  ],
+  "main": "/server/src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -r dotenv/config ./server/src/index.js dotenv_config_path=server/env/local.env",
+    "client": "npm start --prefix client",
+    "dev": " concurrently \"npm start\" \"npm run client\" ",
+    "//": "nodemon -r dotenv/config ./server/src/index.js dotenv_config_path=server/env/local.env"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "json-web-token": "^3.2.0",
+    "jsonwebtoken": "^9.0.1",
+    "memory-cache": "^0.2.0",
+    "mongoose": "^7.4.2",
+    "nodemailer": "^6.9.4",
+    "nodemon": "^3.0.1",
+    "react-router-dom": "^6.15.0",
+    "styled-components": "^6.0.7",
+    "uuid": "^9.0.0"
+  }
+}

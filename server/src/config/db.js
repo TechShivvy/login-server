@@ -1,0 +1,15 @@
+// require("dotenv").config({path: "./server/.env"});
+// require("dotenv").config();
+require("dotenv").config({ path: "../env/local.env" });
+
+const mongoose = require("mongoose");
+
+mongoose
+  .connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("DB Connected");
+  })
+  .catch((err) => console.log(err));
